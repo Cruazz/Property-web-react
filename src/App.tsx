@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Layout } from './components/layout/Layout';
 import { HomePage } from './pages/HomePage';
 import { LocationPage } from './pages/LocationPage';
@@ -23,7 +23,7 @@ const ScrollToTopOnNavigate: React.FC = () => {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTopOnNavigate />
       <Layout>
         <Routes>
@@ -37,7 +37,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
